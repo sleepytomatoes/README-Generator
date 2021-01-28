@@ -1,17 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const axios = require('axios');
-// function newUser(userEmail, projectTitle, projectDescription, installationMethod, usageInfo, licenseInfo, userContributing, userTests, userVersion) {
-//     this.userEmail = userEmail;
-//     this.projectTitle = projectTitle;
-//     this.projectDescription = projectDescription;
-//     this.installationMethod = installationMethod;
-//     this.usageInfo = usageInfo;
-//     this.licenseInfo = licenseInfo;
-//     this.userContributing = userContributing;
-//     this.userTests = userTests;
-//     this.userVersion = userVersion;
-// }
 
 
 
@@ -94,16 +83,16 @@ const createReadMe = function(readMeData) {
     `##${readMeData.projectTitle} README
     
 # Table of Contents
-[Project Description] (#description
-[Installation] (#installation)
-[Usage] (#usage)
-[License] (#license)
-[Tests] (#tests)
-[Version] (#version)
+1. [Project Description] (#description)
+2. [Installation] (#installation)
+3. [Usage] (#usage)
+4. [License] (#license)
+5. [Tests] (#tests)
+6. [Version] (#version)
 
 ------
 
-## Project Description <a name="desctiption"></a>
+## Project Description <a name="description"></a>
 ${readMeData.projectDescription}
 
 ## Installation <a name="installation"></a>
@@ -116,7 +105,10 @@ ${readMeData.usageInfo}
 ${readMeData.licenseInfo}
 
 ## Tests <a name="tests"></a>
+${readMeData.userTests}
 
+## Version <a name="version"></a>
+${readMeData.userVersion}
     `
 
     console.log("readMeContent: ", readMeContent)

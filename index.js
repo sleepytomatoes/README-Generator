@@ -1,16 +1,19 @@
+// setting constants to require dependancies 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const axios = require('axios');
 
 
-
+// getUserGitHub takes in the response from getUserInfo and passes in the username to queryURL which is then used in our API call.
 function getUserGitHub(response) {
     const { userName } = response;
     const queryUrl = `https://api.github.com/users/${userName}`;
     console.log('we are inside function')
     axios.get(queryUrl)
           .then(function ({ data }) {
+            // login and avatar image are deconstructed from data
             const { login, avatar_url } = data
+            // spread operator used to pass in gitHubName and gitPhoto into response object as key/value pairs.
             const readMeData = { ...response, gitHubName: login, gitPhoto: avatar_url }
             createReadMe(readMeData);
           })
@@ -22,7 +25,7 @@ function getUserGitHub(response) {
 
 getUserInfo();
 
-
+// getUserInfo uses inquirer to prompt the user, turning user input into the value assigned to name key in the response object.
 function getUserInfo() {
     inquirer.prompt(
 [{

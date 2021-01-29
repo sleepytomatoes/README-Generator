@@ -17,6 +17,7 @@ function getUserGitHub(response) {
             const readMeData = { ...response, gitHubName: login, gitPhoto: avatar_url }
             createReadMe(readMeData);
           })
+          // error handler function: if the promise cannot be carried out, an error will be logged in the console.
           .catch(function(err) { return console.log('Username not found, enter "control C" and then run "node index.js"')});
         }
 
@@ -105,17 +106,28 @@ ${readMeData.installationMethod}
 ${readMeData.usageInfo}
 
 ## License <a name="license"></a>
-${readMeData.licenseInfo}
+![License](https://img.shields.io/badge/License-${readMeData.licenseInfo}-brightgreen)
 
 ## Tests <a name="tests"></a>
 ${readMeData.userTests}
 
 ## Version <a name="version"></a>
-${readMeData.userVersion}
+![Version](https://img.shields.io/badge/Version-${readMeData.userVersion}-f39f37)
+
+
+## Github 
+Username: [@${readMeData.userName}](https://www.github.com/${readMeData.userName})
+![Photo](${readMeData.gitPhoto})
+
+
+## Contact
+Email: ${readMeData.userEmail}
+
     `
 
     console.log("readMeContent: ", readMeContent)
     const filename = "README.md"
+    // using node, fs.writeFile takes in the file name and the data to be written in the form of a template literal.  It also takes in a callback error function if the function fails.
     fs.writeFile(filename, readMeContent, (err) =>
     err ? console.log(err) : console.log('Success!')
   );

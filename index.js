@@ -88,16 +88,18 @@ const createReadMe = function(readMeData) {
     `##${readMeData.projectTitle} README
     
 # Table of Contents
-1. [Project Description] (#description)
+1. [Project Description] (#descriptionLink)
 2. [Installation] (#installation)
 3. [Usage] (#usage)
 4. [License] (#license)
 5. [Tests] (#tests)
 6. [Version] (#version)
+7. [Github] (#github)
+8. [Contact] (#contact)
 
 ------
 
-## Project Description <a name="description"></a>
+## Project Description <a name="descriptionLink"></a>
 ${readMeData.projectDescription}
 
 ## Installation <a name="installation"></a>
@@ -116,12 +118,12 @@ ${readMeData.userTests}
 ![Version](https://img.shields.io/badge/Version-${readMeData.userVersion}-f39f37)
 
 
-## Github 
+## Github <a name="github"></a>
 Username: [@${readMeData.userName}](https://www.github.com/${readMeData.userName})
 ![Photo](${readMeData.gitPhoto})
 
 
-## Contact
+## Contact <a name="contact"></a>
 Email: ${readMeData.userEmail}
 
     `

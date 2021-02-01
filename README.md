@@ -1,40 +1,42 @@
-##dnjckd README
+##fds README
     
 # Table of Contents
-1. [Project Description] (#description)
+1. [Project Description] (#descriptionLink)
 2. [Installation] (#installation)
 3. [Usage] (#usage)
 4. [License] (#license)
 5. [Tests] (#tests)
 6. [Version] (#version)
+7. [Github] (#github)
+8. [Contact] (#contact)
 
 ------
 
-## Project Description <a name="description"></a>
-cdnjkds
+## Project Description <a name="descriptionLink"></a>
+fdfs
 
 ## Installation <a name="installation"></a>
-cdsnjckds
+fdsf
 
 ## Usage <a name="usage"></a>
-cdsnjcd
+fdsf
 
 ## License <a name="license"></a>
-![License](https://img.shields.io/badge/License-cdn-brightgreen)
+![License](https://img.shields.io/badge/License-ssd-brightgreen)
 
 ## Tests <a name="tests"></a>
-cd
+fdsf
 
 ## Version <a name="version"></a>
-![Version](https://img.shields.io/badge/Version-cd-f39f37)
+![Version](https://img.shields.io/badge/Version-fds-f39f37)
 
 
-## Github 
+## Github <a name="github"</a>
 Username: [@sleepytomatoes](https://www.github.com/sleepytomatoes)
 ![Photo](https://avatars.githubusercontent.com/u/73799082?v=4)
 
 
-## Contact
-Email: djfnks
+## Contact <a name="contact"></a>
+Email: shaunadunn1@gmail.com
 
     

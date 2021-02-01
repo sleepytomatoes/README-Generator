@@ -13,7 +13,7 @@ function getUserGitHub(response) {
           .then(function ({ data }) {
             // login and avatar image are deconstructed from data
             const { login, avatar_url } = data
-            // spread operator used to pass in gitHubName and gitPhoto into response object as key/value pairs.
+            // spread operator used to create a new object (readMeData) which will include new key/value pairs from the API call.
             const readMeData = { ...response, gitHubName: login, gitPhoto: avatar_url }
             createReadMe(readMeData);
           })
@@ -81,6 +81,7 @@ function getUserInfo() {
     });
 }
 
+// createReadMe takes in all of the necessary data to create our README from readMeData, and declares a template literal to implement that data.
 const createReadMe = function(readMeData) {
     console.log("readMeData: ", readMeData)
     const readMeContent = 
@@ -127,7 +128,7 @@ Email: ${readMeData.userEmail}
 
     console.log("readMeContent: ", readMeContent)
     const filename = "README.md"
-    // using node, fs.writeFile takes in the file name and the data to be written in the form of a template literal.  It also takes in a callback error function if the function fails.
+    // using node and the dependency fs, fs.writeFile takes in the file name and the data to be written in the form of a template literal.  It also takes in a callback error function if the function fails.
     fs.writeFile(filename, readMeContent, (err) =>
     err ? console.log(err) : console.log('Success!')
   );

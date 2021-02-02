@@ -88,14 +88,14 @@ const createReadMe = function(readMeData) {
     `##${readMeData.projectTitle} README
     
 # Table of Contents
-1. [Project Description] (#descriptionLink)
-2. [Installation] (#installation)
-3. [Usage] (#usage)
-4. [License] (#license)
-5. [Tests] (#tests)
-6. [Version] (#version)
-7. [Github] (#github)
-8. [Contact] (#contact)
+1. [Project Description](#descriptionLink)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Tests](#tests)
+6. [Version](#version)
+7. [Github](#github)
+8. [Contact](#contact)
 
 ------
 
@@ -119,8 +119,8 @@ ${readMeData.userTests}
 
 
 ## Github <a name="github"></a>
-Username: [@${readMeData.userName}](https://www.github.com/${readMeData.userName})
-\
+Username: [@${readMeData.userName}](https://www.github.com/${readMeData.userName})  
+
 ![Photo](${readMeData.gitPhoto})
 
 

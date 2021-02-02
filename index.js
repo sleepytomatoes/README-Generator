@@ -120,6 +120,7 @@ ${readMeData.userTests}
 
 ## Github <a name="github"></a>
 Username: [@${readMeData.userName}](https://www.github.com/${readMeData.userName})
+\
 ![Photo](${readMeData.gitPhoto})
 
 
